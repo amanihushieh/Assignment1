@@ -28,6 +28,9 @@ public class MainActivity extends AppCompatActivity {
     private RadioGroup radioGroup;
     private ImageView img1;
     private ImageView img2;
+    private ImageView img7;
+    private  TextView txt8;
+    private TextView txt9;
      //this app goal to teach elementary students how to tell time using clock
     // first it gives students two examples how to use clock in sentence,then there will be 2 questions
     //first question is to read clock then select which choice is correct
@@ -41,8 +44,22 @@ public class MainActivity extends AppCompatActivity {
         radioGroup=findViewById(R.id.radioG);
         img1=findViewById(R.id.img1);
         img2=findViewById(R.id.img2);
-        final MediaPlayer mediaPlayer=MediaPlayer.create(this,R.raw.aud);//to put an audio when he answer correct
+        img7=findViewById(R.id.img7);
+        txt8=findViewById(R.id.txt8);
+        txt9=findViewById(R.id.txt9);
 
+        final MediaPlayer mediaPlayer=MediaPlayer.create(this,R.raw.aud);//to put an audio when he answer correct
+        final MediaPlayer mediaPlayer1=MediaPlayer.create(this,R.raw.aud2);//to put an audio when he answer correct
+
+
+        img7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                txt8.setVisibility(View.VISIBLE);
+                txt9.setVisibility(View.VISIBLE);
+                mediaPlayer1.start();
+            }
+        });
         img1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {//Toast will appear when click on the correct radio button

@@ -67,6 +67,7 @@
         android:src="@drawable/icon6"
         android:layout_gravity="left"
         android:layout_marginTop="20dp"
+        android:id="@+id/img7"
         />
     <ImageView
         android:layout_width="200dp"
@@ -87,6 +88,8 @@
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="25sp"
+        android:id="@+id/txt9"
+        android:visibility="invisible"
         android:textStyle="italic"
 
         />
@@ -102,6 +105,8 @@
         android:textColor="@color/yellow"
         android:textSize="25sp"
         android:textStyle="italic"
+        android:visibility="invisible"
+        android:id="@+id/txt8"
 
         />
     <TextView
